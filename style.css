@@ -1,0 +1,134 @@
+/* CSS Document */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark: hsl(240, 38%, 20%);
+  --grayish: hsl(240, 18%, 77%);
+}
+
+body {
+  color: var(--grayish);
+  width: 100vw;
+  font-family: 'Inter', sans-serif;
+}
+
+path{
+  stroke: var(--dark);
+}
+
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+  margin: 20px 0;
+  padding: 40px;
+  text-align: center;
+  line-height: 1.4rem;
+
+}
+
+.text {
+  padding: 40px 0;
+  font-size: 1.1rem;
+  background-image: url(images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.author {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.author .name {
+ 
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.img-box {
+  padding: 40px 0;
+  text-align: center;
+  background-image: url(images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.img-box .img {
+  max-width: 80%;
+  object-fit: content;
+  -webkit-box-shadow: 5px 5px 17px -2px #3C3C3C; 
+  box-shadow: 5px 5px 17px -2px #3C3C3C;
+}
+
+.icons {
+  width: 80px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 40px;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 17px -2px #3C3C3C; 
+  box-shadow: 5px 5px 17px -2px #3C3C3C;
+}
+
+.prev,
+.next {
+  padding: 10px;
+}
+.prev:hover,
+.next:hover {
+  cursor: pointer;
+}
+
+.attribution {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 676px) {
+  .note {
+    flex-direction: row-reverse;
+  }
+  .box {
+    left: 99px;
+    text-align: left;
+    max-width: 40%;
+    padding: 40px 0 40px 40px;
+    margin-left: -20px;
+  }
+  .text{
+    background-position: top 20%;
+  }
+  .author {
+    flex-direction: row;
+  }
+  .author .name{
+    margin-right: 20px;
+  }
+  .img-box{
+    max-width: 40%;
+  }
+  .icons {
+    top: 72%;
+    left: 60%;
+  }
+}
